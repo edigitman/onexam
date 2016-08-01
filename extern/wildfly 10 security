@@ -1,0 +1,9 @@
+<security-domain name="OnExamRealm">
+    <authentication>
+        <login-module code="Database" flag="required">
+            <module-option name="dsJndiName" value="java:/onexam"/>
+            <module-option name="principalsQuery" value="select password from users where email = ?"/>
+            <module-option name="rolesQuery" value="select role, 'Roles' from users where email = ?"/>
+        </login-module>
+    </authentication>
+</security-domain>

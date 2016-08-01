@@ -1,0 +1,3 @@
+<jboss-web>
+    <security-domain>OnExamRealm</security-domain>
+</jboss-web>
