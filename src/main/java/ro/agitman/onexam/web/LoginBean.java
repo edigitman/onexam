@@ -4,16 +4,15 @@ package ro.agitman.onexam.web;
 import ro.agitman.onexam.facade.UserService;
 
 import javax.ejb.EJB;
-import javax.faces.view.ViewScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import javax.jms.IllegalStateException;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 
 
 @Named
-@ViewScoped
+@SessionScoped
 public class LoginBean extends AbstractMB{
 
     @EJB

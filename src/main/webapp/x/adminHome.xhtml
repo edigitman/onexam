@@ -13,6 +13,14 @@
 
     <h:form>
         <p:commandButton action="/index" value="Index"/>
+
+        <p:dataList value="#{adminBean.userList}" var="user" type="ordered">
+            <f:facet name="header">
+                Lista de utilizatori
+            </f:facet>
+            #{user.email}, #{user.name}, ${user.role}
+        </p:dataList>
+
     </h:form>
 </f:view>
 </html>

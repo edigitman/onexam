@@ -7,17 +7,18 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "users")
-@NamedQueries({@NamedQuery(name = User.FIND_BY_EMAIL, query = "select u from User u where u.email = :email")
+@NamedQueries({@NamedQuery(name = User.FIND_BY_EMAIL, query = "select u from User u where u.email = :email"),
+        @NamedQuery(name = User.FIND_ALL, query = "select u from User u")
         //,
 //        @NamedQuery(name = User.FIND_BY_TOKEN, query = "select u from User u where u.regToken = :token"),
 //        @NamedQuery(name = User.FIND_BY_EMAIL_TOKEN, query = "select u from User u where u.regToken = :token and u.email = :email")
 })
-
 public class User extends AbstractModel {
 
     public static final String FIND_BY_EMAIL = "User.findUserByEmail";
     public static final String FIND_BY_TOKEN = "User.findUserByToken";
     public static final String FIND_BY_EMAIL_TOKEN = "User.findUserByEmailAndToken";
+    public static final String FIND_ALL = "User.findAll";
 
     private Long id;
     private String email;

@@ -31,4 +31,8 @@ public class UserServiceImpl implements UserService {
 
         return users.isEmpty() ? null : users.get(0);
     }
+
+    public List<User> findAll(){
+        return service.findAll(User.class);
+    }
 }
