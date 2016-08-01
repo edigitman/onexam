@@ -7,23 +7,14 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:outputLabel value="Hello, admin"/>
-    <!--user list-->
-    <!--add user-->
-    <!--mark user blocked-->
-    <!--invalidate user password-->
+    <h:outputLabel value="Hello, prof"/>
+    <!--review answers from students-->
+    <!--view some statistics [right answers per item, right answers per student]-->
+    <!--mark answer that os not auto-solvable with a percentage-->
     <hr/>
 
     <h:form>
         <p:commandButton action="/index" value="Index"/>
-
-        <p:dataList value="#{adminBean.userList}" var="user" type="ordered">
-            <f:facet name="header">
-                Lista de utilizatori
-            </f:facet>
-            #{user.email}, #{user.name}, ${user.role}
-        </p:dataList>
-
     </h:form>
 </f:view>
 </html>
